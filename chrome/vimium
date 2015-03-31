@@ -1,0 +1,6 @@
+map O Vomnibar.activate
+map o Vomnibar.activateInNewTab
+map BVomnibar.activateBookmarks
+map b Vomnibar.activateBookmarksInNewTab
+map P openCopiedUrlInCurrentTab
+map p openCopiedUrlInNewTab
