@@ -1,0 +1,30 @@
+user-manual /usr/share/doc/privoxy/user-manual/
+forward-socks5 .google.com ${proxy_ip} .
+forward-socks5 .googleapis.com ${proxy_ip} .
+forward-socks5 .googleusercontent.com ${proxy_ip} .
+forward-socks5 .dropbox.com ${proxy_ip} .
+forward-socks5 .dropboxapi.com ${proxy_ip} .
+confdir /etc/privoxy
+logdir /var/log/privoxy
+logfile privoxy.log
+listen-address  0.0.0.0:8118
+toggle  1
+enable-remote-toggle  0
+enable-remote-http-toggle  0
+enable-edit-actions 0
+enforce-blocks 1
+buffer-limit 4096
+enable-proxy-authentication-forwarding 0
+trusted-cgi-referer http://www.example.org/
+forwarded-connect-retries  0
+accept-intercepted-requests 1
+allow-cgi-request-crunching 0
+split-large-forms 0
+keep-alive-timeout 5
+tolerate-pipelining 1
+socket-timeout 300
+# 诊断程序用了哪些连接是开始debug日志
+#debug     1 # Log the destination for each request Privoxy let through. See also debug 1024.
+#debug  1024 # Log the destination for requests Privoxy didn't let through, and the reason why.
+#debug  4096 # Startup banner and warnings
+#debug  8192 # Non-fatal errors
